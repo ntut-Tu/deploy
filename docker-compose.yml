@@ -9,6 +9,7 @@ services:
     build: ../cloth_shop_server 
     ports:
       - "8080:8080"
+      - "5005:5005"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/shopping_db
       SPRING_DATASOURCE_USERNAME: postgres
