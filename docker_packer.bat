@@ -11,7 +11,7 @@ docker build -t your-frontend-image .
 REM Step 2: Navigate to backend directory and build Docker image (JAR deployment)
 echo Building backend Docker image...
 cd /d "%~dp0..\cloth_shop_server"
-call mvn clean package
+call mvnw.cmd clean package 
 docker build -t your-backend-image .
 
 REM Step 3: Navigate to deploy directory and start Docker Compose
