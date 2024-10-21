@@ -1,11 +1,11 @@
 services:
   frontend:
-    build: ../cloth_shop_web
+    image: frontend-image
     ports:
       - "80:80"
 
   backend:
-    build: ../cloth_shop_server 
+    image: backend-image
     ports:
       - "8080:8080"
       - "5005:5005"
@@ -14,7 +14,8 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: 123
       JAVA_TOOL_OPTIONS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
-
+    volumes:
+      - product-images:/app/uploads
   db:
     image: postgres:latest
     environment:
@@ -23,3 +24,6 @@ services:
       POSTGRES_PASSWORD: 123
     ports:
       - "5433:5432"
+volumes:
+  product-images:
+
