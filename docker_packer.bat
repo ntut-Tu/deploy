@@ -6,7 +6,7 @@ echo Building frontend Docker image...
 cd /d "%~dp0..\cloth_shop_web"
 call npm install
 call npm run build
-docker build -t frontend-image .
+docker build --progress=plain --no-cache -t  frontend-image .
 
 REM Step 2: Navigate to backend directory and build Docker image (JAR deployment)
 echo Building backend Docker image...
