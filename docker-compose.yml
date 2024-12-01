@@ -3,7 +3,8 @@ services:
     image: frontend-image
     ports:
       - "80:80"
-
+    volumes:
+      - product-images:/usr/share/nginx/html/uploads
   backend:
     image: backend-image
     ports:
