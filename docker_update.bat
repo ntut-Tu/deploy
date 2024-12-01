@@ -9,7 +9,7 @@ if /I "%projectType%"=="web" (
     docker build -t frontend-image .
     echo Frontend build completed.
     echo Restarting frontend container...
-    docker-compose -f "%~dp0docker-compose.yml" up --build -d frontend
+    docker-compose -f "%~dp0docker-compose.yml" up --build --progress=plain --no-cache -d frontend
     echo Frontend container restarted.
 ) else if /I "%projectType%"=="server" (
     echo Updating server...
