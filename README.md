@@ -1,5 +1,5 @@
 # 使用方法
-使用前必須安裝docker和angular、JDK17\
+使用前必須安裝docker和angular (其實不用)、JDK17 (其實不用)，但為了本地開發還是盡可能裝 \
 放在和前後端一個目錄ex:\
 anyPath \
 ├── cloth_shop_server/ \
